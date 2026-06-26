@@ -1,0 +1,487 @@
+# Instincts generated from https://github.com/dacdoyx/fluxapay
+# Generated: 2026-06-26T16:21:10.216Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: fluxapay-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/dacdoyx/fluxapay
+---
+
+# Fluxapay Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: feat
+
+## Evidence
+
+- 2 commits analyzed
+- Detected conventional commit pattern
+- Examples: feat: add live FX rate widget to checkout page, feat(checkout): show live USDC/fiat equivalent below payment amount
+
+---
+id: fluxapay-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/dacdoyx/fluxapay
+---
+
+# Fluxapay Commit Length
+
+## Action
+
+Write moderate-length commit messages (~57 characters)
+
+## Evidence
+
+- Average commit message length: 57 chars
+- Based on 2 commits
+
+---
+id: fluxapay-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/dacdoyx/fluxapay
+---
+
+# Fluxapay Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: fluxapay-import-alias
+trigger: "when importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/dacdoyx/fluxapay
+---
+
+# Fluxapay Import Alias
+
+## Action
+
+Use path aliases (@/, ~/) instead of relative imports
+
+## Evidence
+
+- Import analysis shows alias pattern
+- Example: import { x } from '@/lib/x'
+
+---
+id: fluxapay-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/dacdoyx/fluxapay
+---
+
+# Fluxapay Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: fluxapay-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/dacdoyx/fluxapay
+---
+
+# Fluxapay Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: 
+
+---
+id: fluxapay-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/dacdoyx/fluxapay
+---
+
+# Fluxapay Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: fluxapay-workflow-add-or-enhance-checkout-fx-rate-display
+trigger: "when doing add or enhance checkout fx rate display"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/dacdoyx/fluxapay
+---
+
+# Fluxapay Workflow Add Or Enhance Checkout Fx Rate Display
+
+## Action
+
+Follow the add-or-enhance-checkout-fx-rate-display workflow:
+1. Implement or update API method for FX rates in API client
+2. Create or update SWR hook for fetching FX rates
+3. Build or enhance UI component (FxRateBadge) to display FX rate and/or fiat equivalent
+4. Embed or update the component in one or more checkout-related page(s)
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: fluxapay_frontend/src/app/pay/[payment_id]/page.tsx, fluxapay_frontend/src/app/pay/invoice/[invoice_id]/page.tsx, fluxapay_frontend/src/components/checkout/FxRateBadge.tsx
+
+---
+id: fluxapay-instinct-file-naming
+trigger: "When creating a new file in the codebase"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: dacdoyx/fluxapay
+---
+
+# Fluxapay Instinct File Naming
+
+## Action
+
+Name the file using camelCase convention
+
+## Evidence
+
+- Pattern in namingConventions.files
+- Observed in fluxapay_frontend/src/components/checkout/FxRateBadge.tsx
+
+---
+id: fluxapay-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: dacdoyx/fluxapay
+---
+
+# Fluxapay Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions
+- Seen in fluxapay_frontend/src/hooks/useFxRate.ts
+
+---
+id: fluxapay-instinct-class-naming
+trigger: "When creating a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: dacdoyx/fluxapay
+---
+
+# Fluxapay Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: fluxapay-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: dacdoyx/fluxapay
+---
+
+# Fluxapay Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: fluxapay-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: dacdoyx/fluxapay
+---
+
+# Fluxapay Instinct Import Style
+
+## Action
+
+Use alias import style
+
+## Evidence
+
+- Pattern in importStyle
+- Seen in fluxapay_frontend/src/components/checkout/FxRateBadge.tsx
+
+---
+id: fluxapay-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: dacdoyx/fluxapay
+---
+
+# Fluxapay Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle
+- Seen in fluxapay_frontend/src/hooks/useFxRate.ts
+
+---
+id: fluxapay-instinct-try-catch-errors
+trigger: "When handling errors in code"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: dacdoyx/fluxapay
+---
+
+# Fluxapay Instinct Try Catch Errors
+
+## Action
+
+Use try-catch blocks for error handling
+
+## Evidence
+
+- Pattern in errorHandling.style
+- Seen in fluxapay_frontend/src/lib/api.ts
+
+---
+id: fluxapay-instinct-custom-error-class
+trigger: "When defining custom errors"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: dacdoyx/fluxapay
+---
+
+# Fluxapay Instinct Custom Error Class
+
+## Action
+
+Implement custom error classes
+
+## Evidence
+
+- Pattern in errorHandling.customErrorClasses
+
+---
+id: fluxapay-instinct-commit-format
+trigger: "When writing a git commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: dacdoyx/fluxapay
+---
+
+# Fluxapay Instinct Commit Format
+
+## Action
+
+Use conventional commits with 'feat' prefix for new features
+
+## Evidence
+
+- Pattern in commits.prefixes
+- Seen in commit 'feat: add live FX rate widget to checkout page'
+
+---
+id: fluxapay-instinct-commit-length
+trigger: "When composing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: dacdoyx/fluxapay
+---
+
+# Fluxapay Instinct Commit Length
+
+## Action
+
+Keep commit messages concise, around 57 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: fluxapay-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: dacdoyx/fluxapay
+---
+
+# Fluxapay Instinct Test Location
+
+## Action
+
+Place test files in a separate test location from source files
+
+## Evidence
+
+- Pattern in architecture.testLocation
+
+---
+id: fluxapay-instinct-type-based-modules
+trigger: "When organizing modules"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: dacdoyx/fluxapay
+---
+
+# Fluxapay Instinct Type Based Modules
+
+## Action
+
+Group modules by type (e.g., components, hooks, lib)
+
+## Evidence
+
+- Pattern in architecture.moduleOrganization
+- Seen in fluxapay_frontend/src/components/checkout/ and fluxapay_frontend/src/hooks/
+
+---
+id: fluxapay-instinct-add-fx-rate-api-method
+trigger: "When adding or enhancing live FX rate display in checkout/invoice pages"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: dacdoyx/fluxapay
+---
+
+# Fluxapay Instinct Add Fx Rate Api Method
+
+## Action
+
+Implement or update the API method for FX rates in the API client
+
+## Evidence
+
+- Workflow step: Implement or update API method for FX rates
+- Seen in fluxapay_frontend/src/lib/api.ts
+
+---
+id: fluxapay-instinct-add-fx-rate-hook
+trigger: "After implementing or updating the FX rate API method"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: dacdoyx/fluxapay
+---
+
+# Fluxapay Instinct Add Fx Rate Hook
+
+## Action
+
+Create or update SWR hook for fetching FX rates
+
+## Evidence
+
+- Workflow step: Create or update SWR hook for fetching FX rates
+- Seen in fluxapay_frontend/src/hooks/useFxRate.ts
+
+---
+id: fluxapay-instinct-add-fx-rate-ui
+trigger: "After creating or updating the FX rate hook"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: dacdoyx/fluxapay
+---
+
+# Fluxapay Instinct Add Fx Rate Ui
+
+## Action
+
+Build or enhance the FxRateBadge UI component to display FX rate and/or fiat equivalent
+
+## Evidence
+
+- Workflow step: Build or enhance UI component (FxRateBadge)
+- Seen in fluxapay_frontend/src/components/checkout/FxRateBadge.tsx
+
+---
+id: fluxapay-instinct-embed-fx-rate-component
+trigger: "After building or enhancing the FxRateBadge component"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: dacdoyx/fluxapay
+---
+
+# Fluxapay Instinct Embed Fx Rate Component
+
+## Action
+
+Embed or update the component in one or more checkout-related pages
+
+## Evidence
+
+- Workflow step: Embed or update the component in checkout-related pages
+- Seen in fluxapay_frontend/src/app/pay/[payment_id]/page.tsx
+
